@@ -32,6 +32,16 @@ struct ContentView: View {
                     
                     Spacer()
                     
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 10)
+                    
+                    Circle()
+                        .foregroundColor(.gray)
+                        .frame(width: 10)
+                        
+                    Spacer()
+                    
                     CircleButtonView(buttonColor: Color("Dark green"),
                                      label: "Start",
                                      labelColor: .green)
@@ -41,11 +51,11 @@ struct ContentView: View {
                 List {
                     
                     Group{
-                        Text("1")
-                        Text("2")
-                        Text("3")
-                        Text("4")
-                        Text("5")
+                        ListView(labelColor: .white, label1: "Lap 5", label2: "00:00.98")
+                        ListView(labelColor: .red, label1: "Lap 4", label2: "00:04.08")
+                        ListView(labelColor: .green, label1: "Lap 3", label2: "00:00.96")
+                        ListView(labelColor: .white, label1: "Lap 2", label2: "00:02.76")
+                        ListView(labelColor: .white, label1: "Lap 1", label2: "00:01.16")
                         
                     }
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
