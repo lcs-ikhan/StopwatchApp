@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ListView: View {
     let labelColor: Color
-    let label: String
+    let label1: String
+    let label2: String
     
     var body: some View {
         
@@ -17,13 +18,13 @@ struct ListView: View {
         
         HStack{
             
-            Text(label)
+            Text(label1)
                 .foregroundColor(labelColor)
             
             
                 Spacer()
             
-            Text(label)
+            Text(label2)
                 .foregroundColor(labelColor)
             
             
@@ -42,6 +43,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(labelColor: .white, label: "00.00.00")
+        ListView(labelColor: .green, label1: "Lap 1", label2: "00.00.00")
     }
 }
